@@ -1,4 +1,4 @@
-// Create express app
+// Create eiMPROVExpress app
 const express = require("express");
 const db = require("./database");
 const app = express();
@@ -8,7 +8,7 @@ const HTTP_PORT = 8000;
 
 // Start server
 app.listen(HTTP_PORT, () => {
-    console.log("Server running on port %PORT%".replace("%PORT%",HTTP_PORT))
+    console.log(`Server running on port ${HTTP_PORT}`);
 });
 
 // Root endpoint
