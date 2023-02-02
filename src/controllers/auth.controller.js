@@ -19,7 +19,7 @@ exports.signup = async (req, res) => {
     }
 };
 
-exports.signin = async (req, res) => {
+exports.login = async (req, res) => {
     try {
         const user = await user_service.findAuthUserByEmail(req.body.email);
 
@@ -44,6 +44,7 @@ exports.signin = async (req, res) => {
 
         return res.status(200).send({
             id: user.id,
+            name: user.name,
             username: user.username,
             email: user.email,
             roles: user.role,
